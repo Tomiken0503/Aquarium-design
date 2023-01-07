@@ -1,0 +1,621 @@
+ *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgb(1, 67, 110);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  body img {
+    border-radius: 30px;
+  }
+
+  #page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: -50px;
+    background: rgba(27, 178, 216, 0.9);
+    opacity: 0.6;
+    border-radius: 50%;
+    z-index: 100;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }  
+
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+header {
+    height: 55px;
+    width: 100%;
+    background-color: rgba(27, 178, 216, 0.9);
+    position :fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header-left {
+    float: left;
+    margin-top: 5px;
+}
+
+.header-right {
+    display: flex;
+    float: right;
+    line-height: 55px;
+}
+
+.header-right a {
+    display: block;
+    padding: 0 15px;
+    transition: all 0.5s;
+    color: white;
+    float: left;
+}
+
+.header-right a .fas{
+    margin-right: 5px;
+}
+
+.header-right a:hover {
+    background-color: black;
+    opacity: 0.3;
+  }
+
+#toggle{
+    position: absolute;
+    left: -50vw;
+  }
+
+  .menu-icon,.close-btn {
+    float: right;
+    color: white;
+    font-size: 25px;
+    line-height: 55px;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: 0.2s;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: -50vw;
+  }
+
+  .menu-icon:hover,.close-btn:hover {
+    transition: all 0.5s;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  #toggle:checked ~ .menu-icon {
+    position: absolute;
+    right: -50vw;
+    transition: 0.2s;
+  }
+
+  #toggle:checked ~ .close-btn {
+    position: relative;
+    right: 0;
+    transition: 0.3s;
+  }
+
+.menu-wrapper {
+    background-color: rgba(27, 178, 216, 0.9);
+    transform: translateY(-200%);
+    transition: 0.3s;
+    width: 100%;
+    padding-bottom: 200vw;
+    text-align:center;
+}
+
+.menu-wrapper h2 {
+  text-align: left;
+  font-weight: bold;
+  font-family:"Hannotate SC","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO",'Noto Sans JP', sans-serif;
+  color:rgb(1, 67, 110);
+  padding: 50px 30px;
+}
+
+#toggle:checked ~ .menu-wrapper {
+  transform: translateY(30px);
+  transition: 0.5s;
+  z-index: 200;
+}
+
+.menu-btn {
+  display: inline-block;
+  background-color: rgb(3, 46, 163);
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  width: 40%;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+
+.menu-btn:hover {
+  opacity: 0.7;
+}
+
+  .menu-top {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .menu-top h3 {
+    border: solid 1px white;
+    border-radius: 4px;
+    padding: 5px;
+    white-space: nowrap;
+  }
+
+  .menu {
+    margin: 0 15px;
+  }
+
+  .menu h3 {
+    text-align: center;
+  }
+
+  .menu ul {
+    padding-left: 0;
+  }
+
+  .menu li a {
+    color: rgb(238, 236, 236);
+    line-height: 2rem;
+  }
+
+  .new-info a {
+    display: block;
+    color: rgb(228, 222, 222);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .new-info a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  .new-info {
+    margin-top: 50px;
+  }
+
+  .menu li a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  .top-wrapper{
+    width: 100%;
+    text-align: center;
+    font-family:"Hannotate SC","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO",'Noto Sans JP', sans-serif;
+    padding: 180px 0 300px 0;
+    background-image: url(image/Aquarium_top_image.jpeg);
+    background-size: cover;
+  }
+
+  .top-wrapper p{
+    font-size: 30px;
+  }
+
+  .annotation {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    position: absolute;
+    bottom: 200px;
+    right: 0px;
+  }
+
+  .top-wrapper h1{
+    font-size: 80px;
+  }
+
+  .top-info {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding-bottom: 50px;
+    
+  }
+
+  .BusinessInfo {
+    margin-left: 60px;
+  }
+
+  .BusinessInfo p {
+    line-height: 1rem;
+  }
+
+.BusinessInfo a{
+  display: inline-block;
+  background-color: rgb(5, 199, 167);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 7px rgba(3, 107, 90, 0.658);
+  color: white;
+}
+  
+.BusinessInfo a:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+.TimeBtn {
+  margin-top: 15px;
+}
+
+.InfoBtn {
+  margin-top: 47px;
+}
+
+.BusinessInfo a:hover {
+  opacity: 0.7;
+}
+
+.info-wrapper {
+  margin: 30px 0 50px 0;
+  text-align: center;
+}
+
+.title {
+ line-height: 1rem;
+ margin-bottom: 30px;
+ text-align: center;
+}
+
+.title i {
+  font-size: 45px;
+}
+
+.infomations {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.info {
+  margin: 0 20px;
+}
+
+.info a {
+  color: white;
+  text-decoration: underline;
+}
+
+.info:hover {
+  opacity: 0.7;
+}
+
+.news-wrapper {
+  margin-bottom: 50px;
+}
+
+.news-content {
+  margin: 0 auto;
+  border: solid 1px rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.news {
+  display: block;
+  color: white;
+  opacity: 0.7;
+  text-decoration: underline;
+  line-height: 2rem;
+}
+
+.news:hover {
+  opacity: 1;
+}
+
+.button {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.more-btn {
+  padding: 5px;
+  font-size: 10px;
+  color: black;
+  background-color: lightgray;
+  border-radius: 2px;
+}
+
+.more-btn:hover {
+  opacity: 0.7;
+}
+
+.courses {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.course img {
+  border-radius: 100%;
+}
+
+.course {
+  margin: 0 20px;
+}
+
+.course a {
+  color: white;
+}
+
+.course:hover {
+  opacity: 0.7;
+}
+
+.guide-wrapper {
+  margin-top: 50px;
+}
+
+.guides {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.guide {
+  margin: 0 20px;
+}
+
+.guide a {
+  color: white;
+}
+
+.guide a:hover {
+  opacity: 0.7;
+}
+
+.guide p {
+  text-align: left;
+}
+
+.access-content {
+  display: flex;
+  justify-content: center;
+}
+
+.access-wrapper {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.access {
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.access a {
+  padding: 10px;
+  color: white;
+  background-color: rgb(5, 199, 167);
+  border-radius: 4px;
+  line-height: 5rem;
+}
+
+.access a:hover {
+  opacity: 0.7;
+}
+
+.ac-title {
+  border: solid 1px rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.price-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.prices {
+  display: flex;
+  justify-content: center;
+}
+
+.PriceList {
+  margin: 0 30px;
+}
+
+.PriceList ul {
+  display: inline-block;
+}
+
+.price {
+  text-align: right;
+}
+
+.categorys {
+  text-align: left;
+}
+
+.TicketType {
+  text-align: center;
+}
+
+.TicketType h3 {
+  display: inline-block;
+  border: solid 1px rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.group-btn {
+  display: inline-block;
+  background-color: rgb(5, 199, 167);
+  border-radius: 4px;
+  color: white;
+  padding: 5px 15px;
+  margin: 20px 0 50px 0;
+}
+
+.group-btn:hover {
+  opacity: 0.7;
+}
+
+.banner-wrapper {
+  padding: 20px 0;
+  margin-bottom: 50px;
+  border-top: solid 3px rgba(255, 255, 255, 0.7);
+  border-bottom: solid 3px rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  margin: 0 5px;
+}
+
+.banner-wrapper img {
+  border-radius: 0;
+}
+
+.banner-wrapper a:hover {
+ opacity: 0.7;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.content h2{
+  font-family:"Hannotate SC","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO",'Noto Sans JP', sans-serif;
+  white-space: nowrap;
+  padding-left: 15px;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.content {
+  position:relative;
+  background-color: rgb(160,204,242);
+  color: black;
+  padding-top: 20px;
+}
+
+.ft-title {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.ft-content {
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.ft-menu {
+  background-color: rgb(160,204,242);
+  padding: 15px;
+  text-align: center;
+}
+
+.ft-menu li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.ft-menu a {
+  color: rgb(1, 5, 61);
+}
+
+.ft-menu a:hover {
+  opacity: 0.5;
+}
+
+.copyright {
+  color: black;
+  padding: 30px 0 15px 0;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}

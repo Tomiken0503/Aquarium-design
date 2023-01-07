@@ -1,0 +1,210 @@
+@media screen and (max-width: 1000px) {
+    .menu-btn {
+        white-space: nowrap;
+    }
+
+    header {
+        font-size: 15px;
+    }
+
+    .header-content {
+        max-width: 1170px;
+    }
+
+    .new-info {
+        margin-top: 15px;
+      }
+    
+    .top-info {
+        flex-wrap: wrap;
+        text-align: center;
+     }
+
+     .BusinessInfo {
+         margin-bottom: 20px;
+     }
+
+    .banner-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .banner {
+        text-align: center;
+    }
+
+    .infomations {
+        flex-wrap: wrap;
+     }
+
+     .info {
+        margin-bottom: 20px;
+    }
+
+    .courses{
+        flex-wrap: wrap;
+   }
+
+   .course {
+        margin-bottom: 20px;
+   }
+
+   .guides {
+        flex-wrap: wrap;
+   }
+
+.guide {
+        margin-bottom: 20px;
+   }
+
+.access a {
+        white-space: nowrap;
+    }
+
+    .prices {
+        flex-wrap: wrap;
+    }
+
+      .flex {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .ft-menu li {
+        margin: 10px 15px;
+        white-space: nowrap;
+        line-height: 3rem;
+      } 
+ }
+
+ @media screen and (max-width: 600px) {
+    header {
+        font-size: 13px;
+    }
+
+    .header-right {
+        display:none;
+    }
+
+     .menu-wrapper h2 {
+        padding-bottom: 5px;
+     }
+
+     .menu-top {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .menu {
+          margin-top: 5px;
+          margin-bottom: 5px;
+      }
+
+      .menu li a {
+          line-height: 5px;
+      }
+
+      .menu-btn {
+          width: 100%;
+          font-size: 10px;
+          margin-bottom: 10px;
+          text-align: center;
+          padding: 5px;
+      }
+
+      .mod {
+          order: 2;
+      }
+
+      .gui {
+          order: 1;
+      }
+
+      .add {
+        order: 3;
+        max-width: 100px;
+      }
+
+      .add-content {
+          margin: 5px;
+      }
+
+      .eve {
+          order: 4;
+      }
+
+     .top-wrapper h1 {
+         font-size: 60px;
+     }
+
+     .top-info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+     }
+
+
+     .BusinessInfo {
+         margin-left: 0;
+         margin-bottom: 15px;
+     }
+
+     .BusinessInfo a {
+         width: 70%;
+         text-align: center;
+     }
+
+     .top-wrapper p{
+        font-size: 20px;
+      }
+
+      .annotation {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 10px;
+        position: absolute;
+        bottom: 280px;
+        right: 0px;
+      }
+
+     .InfoBtn {
+        margin-top: 5px;
+     }
+
+    .news-content {
+        font-size: 15px;
+    }
+
+    .access {
+        font-size: 13px;
+        margin: 0 20px;
+    }
+
+    .ac-title {
+        white-space: nowrap;
+    }
+
+    .PriceList {
+        font-size: 13px;
+    }
+
+    .group-btn {
+        width: 100%;
+    }
+
+    .group-btn img {
+        text-align: center;
+    }
+      .copyright {
+          font-size: 13px;
+      }
+      
+ }
+
+ @media screen and (max-width: 321px) {
+    .menu-top {
+        line-height: 15px;
+      }
+      .ac-title {
+          margin-bottom: 5px;
+      }
+ }
